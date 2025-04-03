@@ -33,6 +33,7 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+            'throw' => false,
         ],
 
         'public' => [
@@ -40,6 +41,7 @@ return [
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
+            'throw' => false,
         ],
 
         's3' => [
@@ -51,6 +53,7 @@ return [
             'url' => env('MINIO_ENDPOINT'),
             'endpoint' => env('MINIO_ENDPOINT'),
             'use_path_style_endpoint' => true,
+            'throw' => false,
         ],
 
     ],
